@@ -1,0 +1,31 @@
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 0.5rem solid rgba($black, 0.03);
+  font-size: 3.5rem;
+  background-color: getColor(tertiary);
+
+  p {
+    @extend %mb-5;
+  }
+
+  &:nth-child(6n) {
+    grid-column: span 6;
+    background: cornflowerblue;
+  }
+
+  &:nth-child(8n) {
+    grid-column: span 2;
+    background: tomato;
+  }
+
+  &:nth-child(9n) {
+    grid-row: span 2;
+  }
+
+  &18 {
+    background: greenyellow !important;
+    grid-column-end: -1 !important;
+  }
+}

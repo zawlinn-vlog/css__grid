@@ -1,0 +1,9 @@
+//
+
+.container {
+  display: grid;
+  gap: 1rem;
+  /*  fr take all width and auto take content width   */
+  grid-template-columns: 10rem 20rem;
+  grid-template-rows: 10rem 30rem 20rem 5rem;
+}

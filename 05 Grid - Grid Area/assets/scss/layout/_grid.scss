@@ -1,0 +1,21 @@
+//
+
+.container {
+  display: grid;
+  gap: 1rem;
+  /*  fr take all width and auto take content width   */
+  grid-template-columns: 1fr 50rem 1fr;
+  grid-template-rows: repeat(2, 15rem) 10rem;
+
+  grid-template-areas:
+    "sidebar-1 content sidebar-2"
+    "sidebar-1 content sidebar-2"
+    "footer    footer  footer";
+
+  @media screen and (max-width: 70rem) {
+    grid-template-areas:
+      "content   content   content"
+      "sidebar-1 sidebar-1 sidebar-2"
+      "footer    footer    footer";
+  }
+}

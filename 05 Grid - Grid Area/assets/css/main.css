@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+:root {
+  --primary-color: #f93d66;
+  --secondary-color: #6d47d9;
+  --tertiary-color: #ffc600;
+  --black-color: #272727;
+  --light-color: #efefef;
+}
+
+.item p, h6, h5, h4, h3, h2, h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "lato", sans-serif;
+  font-weight: 900;
+  color: var(--black-color);
+  text-shadow: 0 2px 0 rgba(39, 39, 39, 0.07);
+}
+
+body {
+  min-height: -webkit-calc(100vh - 100px);
+  min-height: -moz-calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+  background-image: url("../img/topography.svg"), -webkit-linear-gradient(340deg, #f93d66, #6d47d9);
+  background-image: url("../img/topography.svg"), -moz-linear-gradient(340deg, #f93d66, #6d47d9);
+  background-image: url("../img/topography.svg"), linear-gradient(110deg, #f93d66, #6d47d9);
+  background-size: 3.5rem, auto;
+  background-attachment: fixed;
+  letter-spacing: -0.1rem;
+  margin: 5rem;
+}
+
+.item {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.5rem solid rgba(39, 39, 39, 0.03);
+  font-size: 3.5rem;
+  background-color: var(--tertiary-color);
+}
+.item1 {
+  grid-area: sidebar-1;
+}
+.item2 {
+  grid-area: content;
+}
+.item3 {
+  grid-area: sidebar-2;
+}
+.item4 {
+  grid-area: footer;
+}
+
+.title__txt {
+  color: var(--light-color);
+  font-size: 4.6rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.5rem solid var(--tertiary-color);
+}
+
+.container {
+  display: grid;
+  gap: 1rem;
+  /*  fr take all width and auto take content width   */
+  grid-template-columns: 1fr 50rem 1fr;
+  grid-template-rows: repeat(2, 15rem) 10rem;
+  grid-template-areas: "sidebar-1 content sidebar-2" "sidebar-1 content sidebar-2" "footer    footer  footer";
+}
+@media screen and (max-width: 70rem) {
+  .container {
+    grid-template-areas: "content   content   content" "sidebar-1 sidebar-1 sidebar-2" "footer    footer    footer";
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvYWJzdHJhY3QvX3ZhcmlhYmxlcy5zY3NzIiwibWFpbi5jc3MiLCIuLi9zY3NzL2Fic3RyYWN0L19wbGFjZWhvbGRlci5zY3NzIiwiLi4vc2Nzcy9iYXNlL19iYXNlLnNjc3MiLCIuLi9zY3NzL2NvbXBvbmVudC9fY29tcG9uZW50cy5zY3NzIiwiLi4vc2Nzcy9jb21wb25lbnQvX3R5cG9ncmFwaHkuc2NzcyIsIi4uL3Njc3MvbGF5b3V0L19ncmlkLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRVEsK0lBQUE7QUFvQlI7RUFFSSx3QkFBQTtFQUFBLDBCQUFBO0VBQUEseUJBQUE7RUFBQSxzQkFBQTtFQUFBLHNCQUFBO0FDakJKOztBQ1BBO0VBQ0Usb0JBQUE7QURVRjs7QUVUQTs7O0VBR0UsVUFBQTtFQUNBLFNBQUE7RUFDQSwyQkFBQTtLQUFBLHdCQUFBO1VBQUEsbUJBQUE7QUZZRjs7QUVQQTtFQUNFLDhCQUFBO0tBQUEsMkJBQUE7VUFBQSxzQkFBQTtFQUNBLGdCQUFBO0VBQ0EsK0JBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0VBQ0EsMkNBQUE7QUZVRjs7QUVMQTtFQUNFLHVDQUFBO0VBQUEsb0NBQUE7RUFBQSwrQkFBQTtFQUNBLGlHQUFBO0VBQUEsOEZBQUE7RUFBQSx5RkFBQTtFQUVBLDZCQUFBO0VBQ0EsNEJBQUE7RUFDQSx1QkFBQTtFQUNBLFlBQUE7QUZPRjs7QUdyQ0E7RUFDRSxhQUFBO0VBQ0Esd0JBQUE7RUFBQSwrQkFBQTtLQUFBLHFCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO0VBQUEsMkJBQUE7S0FBQSxzQkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSwyQ0FBQTtFQUNBLGlCQUFBO0VBQ0EsdUNBQUE7QUh3Q0Y7QUdsQ0U7RUFDRSxvQkFBQTtBSG9DSjtBR2xDRTtFQUNFLGtCQUFBO0FIb0NKO0FHbENFO0VBQ0Usb0JBQUE7QUhvQ0o7QUdqQ0U7RUFDRSxpQkFBQTtBSG1DSjs7QUl4REE7RUFDRSx5QkFBQTtFQUNBLGlCQUFBO0VBQ0Esc0JBQUE7RUFDQSxpREFBQTtBSjJERjs7QUsvREE7RUFDRSxhQUFBO0VBQ0EsU0FBQTtFQUNBLHFEQUFBO0VBQ0Esb0NBQUE7RUFDQSwwQ0FBQTtFQUVBLDJHQUNFO0FMZ0VKO0FLNURFO0VBWkY7SUFhSSwrR0FDRTtFTDhESjtBQUNGIiwiZmlsZSI6Im1haW4uY3NzIn0= */

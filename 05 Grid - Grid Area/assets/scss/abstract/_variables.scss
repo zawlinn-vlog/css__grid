@@ -1,0 +1,27 @@
+//
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+//
+
+$primary: #f93d66;
+$secondary: #6d47d9;
+$tertiary: #ffc600;
+$black: #272727;
+$light: #efefef;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "black": $black,
+  "light": $light,
+);
+
+//
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}-color: #{$color};
+  }
+}

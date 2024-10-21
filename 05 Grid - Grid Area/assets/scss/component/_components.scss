@@ -1,0 +1,26 @@
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 0.5rem solid rgba($black, 0.03);
+  font-size: 3.5rem;
+  background-color: getColor(tertiary);
+
+  p {
+    @extend %mb-5;
+  }
+
+  &1 {
+    grid-area: sidebar-1;
+  }
+  &2 {
+    grid-area: content;
+  }
+  &3 {
+    grid-area: sidebar-2;
+  }
+
+  &4 {
+    grid-area: footer;
+  }
+}

@@ -1,0 +1,17 @@
+//
+
+.container {
+  display: grid;
+  gap: 1rem;
+  /*  fr take all width and auto take content width   */
+  // grid-template-columns: repeat(5, 1fr 2fr);
+  // grid-template-rows: repeat(10, 5rem);
+  grid-template-columns: repeat(auto-fit, 15rem);
+  grid-template-columns: repeat(auto-fill, 15rem);
+  grid-template-columns: repeat(6, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-template-columns: auto repeat(4, 15rem);
+  grid-template-columns: fit-content(20rem) repeat(4, 15rem);
+  grid-template-columns: max-content repeat(4, 15rem);
+}

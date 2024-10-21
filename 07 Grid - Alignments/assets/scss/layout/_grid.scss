@@ -1,0 +1,9 @@
+//
+
+.container {
+  display: grid;
+  gap: 1rem;
+  /*  fr take all width and auto take content width   */
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-flow: dense;
+}

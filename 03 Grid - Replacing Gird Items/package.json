@@ -1,0 +1,22 @@
+{
+  "name": "01-grid---intro",
+  "version": "1.0.0",
+  "description": "\"Grid Tutorials by Web Bos\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "browser-sync start --server --file '**/*.css,**/*.html,*.js' --directory --port 8888 --browser",
+    "watch": "sass ./assets/scss/main.scss ./assets/css/main.css -w"
+  },
+  "author": "Web bos",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.78.0"
+  }
+}
